@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Browse Video Games</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game {
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.game img {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="DALL·E 2024-04-17 15.26.13 - Create a logo for 'Gaming Galaxy' with the name in a bold, modern sans-serif font. Style the 'G' of 'Gaming' and the 'G' of 'Galaxy' with a purple col.webp" width="200">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="cartpage.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="games-container">
+            <div class="game">
+                <img src="pictures/Red_Dead_Redemption_II.jpeg" width="200">
+                <h2>Red Dead Redemption 2</h2>
+                <p>$106.65 AUD</p>
+                <p>An action-adventure game set in the American Wild West.</p>
+                <button class="add-to-cart" data-name="Red Dead Redemption 2" data-price="106.65">Add to Cart</button>
+            </div>
+            <div class="game">
+                <img src="pictures/doom eternal.webp" width="200">
+                <h2>Doom Eternal</h2>
+                <p>$79.99 AUD</p>
+                <p>A first-person shooter game known for its intense, fast-paced gameplay, challenging levels, and satisfying gunplay.</p>
+                <button class="add-to-cart" data-name="Doom Eternal" data-price="106.65">Add to Cart</button>
+            </div>
+            <div class="game">
+                <img src="pictures/gta.png" width="200">
+                <h2>Grand Theft Auto V</h2>
+                <p>$79.99 AUD</p>
+                <p>An open-world action-adventure game known for its expansive multiplayer mode, intricate storylines, and immersive gameplay.</p>
+                <button class="add-to-cart" data-name="Grand Theft Auto V" data-price="79.99">Add to Cart</button>
+            </div>
+            <div class="game">
+                <img src="pictures/cyberpunk.jpeg" width="200">
+                <h2>Cyberpunk 2077</h2>
+                <p>$79.99 AUD</p>
+                <p>An open-world action role-playing game set in a dystopian future, known for its deep narrative, expansive world, and detailed customization options.</p>
+                <button class="add-to-cart" data-name="Cyberpunk 2077" data-price="79.99">Add to Cart</button>
+            </div>
+            <div class="game">
+                <img src="pictures/BOCW_Cover_Art.jpeg" width="200">
+                <h2>Call of Duty: Black Ops Cold War</h2>
+                <p>$79.99 AUD</p>
+                <p>A first-person shooter game known for its fast-paced multiplayer mode, gripping campaign, and realistic graphics.</p>
+                <button class="add-to-cart" data-name="Call of Duty: Black Ops Cold War" data-price="79.99">Add to Cart</button>
+            </div>
+            <div class="game">
+                <img src="pictures/Assassin's_Creed_Valhalla_cover.jpeg" width="200">
+                <h2>Assassin's Creed Valhalla</h2>
+                <p>$93.32 AUD</p>
+                <p>An action role-playing game set in the Viking age, featuring exploration, combat, and a rich storyline set in a vast open world.</p>
+                <button class="add-to-cart" data-name="Assassin's Creed Valhalla" data-price="93.32">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="cart-functions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const name = this.getAttribute('data-name');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    addToCart(name, price);
+                });
+            });
+        });
+    </script>
+    <script src="cart-functions.js"></script>
+    <footer>
+        © 2024 Browse Video Games. All rights reserved.
+    </footer>
+</body>
+</html>
+
